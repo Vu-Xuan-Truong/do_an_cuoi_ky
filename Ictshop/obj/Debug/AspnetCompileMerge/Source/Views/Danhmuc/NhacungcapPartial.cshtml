@@ -1,0 +1,18 @@
+﻿
+@using Ictshop.Models;
+@model List<Nhacungcap>
+
+<br />
+
+<div class="bg-success">
+
+    <div class="row">
+
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-1">
+                <button class="success"><a href="#"> @item.TenNCC</a></button>
+            </div>
+        }
+    </div>
+</div>

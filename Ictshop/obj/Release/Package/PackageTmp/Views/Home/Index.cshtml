@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "Never Die";
+    
+}
+
+
+<br />
+<div class="row">
+    <div class="col-md-8">
+       @Html.Action("SlidePartial","Home")
+    </div>
+    <div class="col-md-4">
+        <img src="~/Pictrure/giphy.gif" class="img-responsive" alt="" />
+        <p><a class="btn btn-default" href="https://www.hiepsiit.com/">Learn more &raquo;</a></p>
+    </div>
+</div>
+<div>
+    <img class="img-responsive" src="~/Pictrure/HD/Sologan1.jpg" />
+</div>
+<br />
+<div class="spnoibat">
+    <div class="row">
+
+        <h3> SẢN PHẨM NỔI BẬT</h3>
+        <div class="col-md-4">
+            <img src="~/Pictrure/QC3.jpg" class="img-responsive" alt="" />
+        </div>
+        <div class="col-md-4">
+            <img src="~/Pictrure/QC4.jpg" class="img-responsive" alt="" />
+        </div>
+        <div class="col-md-4">
+            <img src="~/Pictrure/QC2.jpg" class="img-responsive" alt="" />
+        </div>
+    </div>
+</div>
+<div class="dt">
+
+    @Html.Action("hatgionghoapartial","Sanpham")
+</div>
+<div class="dt">
+
+    @Html.Action("cayanquaPartial", "Sanpham")
+</div>
+
+<div class="dt">
+
+    @Html.Action("caycanhPartial", "Sanpham")
+</div>
+
+<div class="row">
+    <h2> Tin tức sản phẩm</h2>
+    <div class="col-md-8">
+        <b >Video</b> 
+        <img src="~/Pictrure/Slider/hdh.gif" class="img-responsive" alt="" width="150" height="150" />
+    </div>
+    <div class="col-md-4">
+        <b>Tin tức</b> 
+        <img src="~/Pictrure/Slider/video1.gif" class="img-responsive" alt="" width="150" height="150" />
+    </div>
+</div>
+

@@ -1,0 +1,27 @@
+﻿@model Ictshop.Models.Nhacungcap
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Nhà Cung Cấp</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenNCC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenNCC)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TenNCC }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,33 @@
+﻿@using Ictshop.Models;
+@model List<Sanpham>
+<div class="row">
+    <div class=" bg-danger"><h3 style="padding-left:20px"> HẠT GIỐNG HOA </h3></div>
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
+            <div class=" thumbnail">
+                <img src="~/Pictrure/HD/@item.Anhbia" alt="@item.Tensp"
+                     class="img-responsive img-rounded imghg" />
+                <div class=" caption">
+                    <h4 style="min-height:70px;">
+                        <a href="@Url.Action("xemchitiet", "Sanpham", new {id = item.Masp})">
+                            @item.Tensp
+                        </a>
+                    </h4>
+                    <p>
+                        <a href="@Url.Action("ThemGioHang", "GioHang", new {iMasp = item.Masp, url = Request.Url.ToString()})" class="btn btn-primary" role="button">
+                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true">
+                            </span>Mua hàng
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    }
+
+
+ 
+</div>
+
+

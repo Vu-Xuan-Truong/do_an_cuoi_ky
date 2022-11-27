@@ -1,0 +1,43 @@
+﻿@using webHD.Models;
+@model IEnumerable<webHD.Models.Nhacungcap>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Quản lý Nhà Cung Cấp</h2>
+
+<p>
+    @Html.ActionLink("Thêm mới nhà cung cấp mới", "Create")
+</p>
+<table class="table">
+    <tr>
+
+        <th>
+            Mã Nhà Cung cấp
+        </th>
+        <th>
+            Tên Nhà Cung Cấp
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaNCC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaNCC)
+            </td>
+            <td>
+                @Html.ActionLink("Sửa", "Edit", new { id = item.MaNCC }) |
+                @Html.ActionLink("Chi tiết", "Details", new { id = item.MaNCC }) |
+                @Html.ActionLink("Xoá", "Delete", new { id = item.MaNCC })
+            </td>
+        </tr>
+    }
+
+</table>

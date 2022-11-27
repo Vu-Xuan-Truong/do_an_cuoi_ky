@@ -1,0 +1,35 @@
+﻿@using Ictshop.Models
+@model Sanpham
+
+
+@{
+    ViewBag.Title = "xemchitiet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+
+<CENTER>
+    <div>
+        <h2>CHI TIẾT SẢN PHẨM</h2>
+        <div class="thumbnail">
+            <h4 class="tensp" style="text-align:center;">
+
+                @Model.Tensp
+
+            </h4>
+            <img src="~/Pictrure/HD/@Model.Anhbia" alt="placeholder image" width="50%" />
+            <div class="motasanpham">
+                <p> @Html.Raw(Model.Mota.ToString())</p>
+            </div>
+            <p class="ngaycapnhat">Ngay cap nhat: @Html.FormatValue(Model.NgayCapNhat, "{0:dd/MM/yyyy}")</p>
+            <p class="giaban">Gia ban: <span>@Html.FormatValue(Model.Giatien, " {0:#,##0}") VND</span></p>
+            <p class="addtocard">
+                <a href="@Url.Action("ThemGioHang","GioHang", new {ms = Model.Masp, url = Request.Url.ToString()})"
+                   class="btn btn-primary" role="button">
+                    <span class="nglyphicon glyphicon-shopping-cart"
+                          aria-hidden="true"></span> Mua hàng
+                </a>
+            </p>
+        </div>
+    </div>
+</CENTER>

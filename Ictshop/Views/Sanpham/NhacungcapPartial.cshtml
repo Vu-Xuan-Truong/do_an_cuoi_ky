@@ -1,0 +1,11 @@
+﻿@model IEnumerable<webHD.Models.Nhacungcap>
+
+<ul class="list-group">
+
+   @foreach(var item in Model)
+    {
+        <!--Lay du lieu id tu NXB Partial-->
+        <a href="@Url.Action("Nhacungcap","Sanpham", new { id = item.MaNCC})"
+           class="list-group-item">@item.TenNCC</a>
+    }
+</ul>
